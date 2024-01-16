@@ -25,7 +25,8 @@ const Login = () => {
 
   const LoginUser = () => {
     axios
-      .post("http://localhost:5000/login", {
+      // .post("http://localhost:5000/login", {
+        .post("https://sore-teal-coyote-veil.cyclic.app/login", {
         password: password,
         email: userName,
       })
