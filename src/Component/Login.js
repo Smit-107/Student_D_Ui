@@ -26,7 +26,7 @@ const Login = () => {
   const LoginUser = () => {
     axios
       // .post("http://localhost:5000/login", {
-        .post("https://sore-teal-coyote-veil.cyclic.app/login", {
+        .post("https://sore-teal-coyote-veil.cyclic.app/Login", {
         password: password,
         email: userName,
       })
