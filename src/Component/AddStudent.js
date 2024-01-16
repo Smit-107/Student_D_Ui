@@ -141,6 +141,43 @@ const AddStudent = () => {
     setIsModalOpenSame(false);
   };
 
+  const handlegetData = (event) => {
+    axios
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewsinglecourse/${event}`, {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then(function (response) {
+        const data = response.data.data;
+        setContent(data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://sore-teal-coyote-veil.cyclic.app/course/allcourse", {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then(function (response) {
+        const data = response.data.data1;
+        setCourses(data);
+      })
+      .catch(function (error) {
+        alert(error);
+      });
+  }, [token]);
+
+
+
   const addStudent = () => {
     let sum = 0;
 
@@ -231,40 +268,6 @@ const AddStudent = () => {
         setIsModalOpenWP(false);
       }, 2000);
     }
-  };
-
-  const [courses, setCourses] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://sore-teal-coyote-veil.cyclic.app/course/allcourse", {
-        headers: {
-          Authorization: token,
-        },
-      })
-      .then(function (response) {
-        const data = response.data.data1;
-        setCourses(data);
-      })
-      .catch(function (error) {
-        alert(error);
-      });
-  }, [token]);
-
-  const handlegetData = (event) => {
-    axios
-      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewsinglecourse/${event}`, {
-        headers: {
-          Authorization: token,
-        },
-      })
-      .then(function (response) {
-        const data = response.data.data;
-        setContent(data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
   };
 
   return (
