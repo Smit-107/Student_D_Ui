@@ -18,7 +18,7 @@ const ViewContent = () => {
 
   const fetchCourses = () => {
     axios
-      .get("http://localhost:5000/course/allcontent", {
+      .get("https://sore-teal-coyote-veil.cyclic.app/course/allcontent", {
         headers: {
           Authorization: token,
         },
@@ -40,7 +40,7 @@ const ViewContent = () => {
 
   const handleDelete = (course_id) => {
     axios
-      .delete(`http://localhost:5000/course/contentdelete/${course_id}`, {
+      .delete(`https://sore-teal-coyote-veil.cyclic.app/course/contentdelete/${course_id}`, {
         headers: {
           Authorization: token,
         },
@@ -61,7 +61,7 @@ const ViewContent = () => {
     setViewCourceT(true);
     setContentFocused(true);
     axios
-      .get(`http://localhost:5000/course/viewsinglecontent/${_id}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewsinglecontent/${_id}`, {
         headers: {
           Authorization: token,
         },
@@ -105,7 +105,7 @@ const ViewContent = () => {
     setViewCourceT(false);
     axios
       .put(
-        "http://localhost:5000/course/updatecontent",
+        "https://sore-teal-coyote-veil.cyclic.app/course/updatecontent",
         {
           content_id: updateContent._id,
           content: updateContent.content,

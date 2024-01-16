@@ -55,7 +55,7 @@ const AddUser = () => {
     const { userName, password } = values;
     if (userName !== "" && password !== "") {
       axios
-        .post("http://localhost:5000/register", {
+        .post("https://sore-teal-coyote-veil.cyclic.app/register", {
           password: password,
           email: userName,
         })

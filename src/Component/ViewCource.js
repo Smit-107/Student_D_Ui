@@ -37,7 +37,7 @@ const TableExample = () => {
 
   const fetchCourses = () => {
     axios
-      .get(`http://localhost:5000/course/allcourse?page_no=${page}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/allcourse?page_no=${page}`, {
         headers: {
           Authorization: token,
         },
@@ -63,7 +63,7 @@ const TableExample = () => {
 
   const DeleteCource = (course_id) => {
     axios
-      .delete(`http://localhost:5000/course/coursedelete/${course_id}`, {
+      .delete(`https://sore-teal-coyote-veil.cyclic.app/course/coursedelete/${course_id}`, {
         headers: {
           Authorization: token,
         },
@@ -103,7 +103,7 @@ const TableExample = () => {
     setViewCourceT(true);
     setCourseFocused(true);
     axios
-      .get(`http://localhost:5000/course/viewsinglecourse/${_id}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewsinglecourse/${_id}`, {
         headers: {
           Authorization: token,
         },
@@ -150,7 +150,7 @@ const TableExample = () => {
     }
    else{
     axios.put(
-      "http://localhost:5000/course/updatecourse",
+      "https://sore-teal-coyote-veil.cyclic.app/course/updatecourse",
       {
         course_id: updateCource._id,
         coursename: updateCource.coursename,

@@ -155,7 +155,7 @@ const AddStudent = () => {
       if (content.content_id?.total_fees === sum) {
         axios
           .post(
-            "http://localhost:5000/course/newadmission",
+            "https://sore-teal-coyote-veil.cyclic.app/course/newadmission",
             {
               surname: inputStudent.lastname,
               studentname: inputStudent.firstname,
@@ -237,7 +237,7 @@ const AddStudent = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/course/allcourse", {
+      .get("https://sore-teal-coyote-veil.cyclic.app/course/allcourse", {
         headers: {
           Authorization: token,
         },
@@ -253,7 +253,7 @@ const AddStudent = () => {
 
   const handlegetData = (event) => {
     axios
-      .get(`http://localhost:5000/course/viewsinglecourse/${event}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewsinglecourse/${event}`, {
         headers: {
           Authorization: token,
         },

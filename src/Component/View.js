@@ -14,7 +14,7 @@ const View = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/course/viewstudentDetail/${param.id}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewstudentDetail/${param.id}`, {
         headers: {
           Authorization: token,
         },

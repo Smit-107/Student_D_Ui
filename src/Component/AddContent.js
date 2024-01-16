@@ -90,7 +90,7 @@ const AddContent = () => {
   useEffect(() => {
    
     axios
-      .get("http://localhost:5000/course/allcourse", {
+      .get("https://sore-teal-coyote-veil.cyclic.app/course/allcourse", {
         headers: {
           Authorization: token,
         },
@@ -107,7 +107,7 @@ const AddContent = () => {
     // if (selectedId) {
       axios
         .post(
-          "http://localhost:5000/course/addcontent",
+          "https://sore-teal-coyote-veil.cyclic.app/course/addcontent",
           {
             course_id: selectedId,
             content: values.cantent,

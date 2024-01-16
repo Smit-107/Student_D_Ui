@@ -24,7 +24,7 @@ const ViewStudent = () => {
 
   const viewData = () => {
     axios
-      .get(`http://localhost:5000/course/allstudent_detail`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/allstudent_detail`, {
         headers: {
           Authorization: token,
         },
@@ -40,7 +40,7 @@ const ViewStudent = () => {
 
   const handleDelete = (s_id) => {
     axios
-      .delete(`http://localhost:5000/course/deletestudentDetail/${s_id}`, {
+      .delete(`https://sore-teal-coyote-veil.cyclic.app/course/deletestudentDetail/${s_id}`, {
         headers: {
           Authorization: token,
         },
@@ -245,7 +245,7 @@ const ViewStudent = () => {
       ) {
         axios
           .put(
-            `http://localhost:5000/course/updatestudentDetail/${id}`,
+            `https://sore-teal-coyote-veil.cyclic.app/course/updatestudentDetail/${id}`,
             {
               surname: inputStudent.lastname,
               studentname: inputStudent.firstname,
@@ -341,7 +341,7 @@ const ViewStudent = () => {
     setViewCourceT(true);
     // setContentFocused(true);
     axios
-      .get(`http://localhost:5000/course/viewstudentDetail/${id}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewstudentDetail/${id}`, {
         headers: {
           Authorization: token,
         },
@@ -387,7 +387,7 @@ const ViewStudent = () => {
       });
 
     axios
-      .get("http://localhost:5000/course/allcourse", {
+      .get("https://sore-teal-coyote-veil.cyclic.app/course/allcourse", {
         headers: {
           Authorization: token,
         },
@@ -402,7 +402,7 @@ const ViewStudent = () => {
   };
   const handlegetData = (event) => {
     axios
-      .get(`http://localhost:5000/course/viewsinglecourse/${event}`, {
+      .get(`https://sore-teal-coyote-veil.cyclic.app/course/viewsinglecourse/${event}`, {
         headers: {
           Authorization: token,
         },

@@ -50,7 +50,7 @@ const AddCourse = () => {
     } else {
       axios
         .post(
-          "http://localhost:5000/course/addcourse",
+          "https://sore-teal-coyote-veil.cyclic.app/course/addcourse",
           {
             coursename: addCourse,
           },
